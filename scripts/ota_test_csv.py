@@ -8,7 +8,7 @@ This version uses the original CSV file for DGTO lookups instead of Excel.
 
 import time
 import os
-import pandas as pd
+import re
 from datetime import datetime
 from pymtstestlib.api import API
 from pymtstestlib.shared.error_defs import EErrors
@@ -152,7 +152,6 @@ class DGTOLookup:
 
     def _convert_code_string(self, dgto_str):
         """Convert D-G-T-O string format to hex value."""
-        import re
         if re.match(r"^[0-9]+-[0-9]+-[0-9]+-[0-9]+$", dgto_str):
             hex_val = self._dgto_to_hex(dgto_str)
             return hex_val, None, dgto_str
