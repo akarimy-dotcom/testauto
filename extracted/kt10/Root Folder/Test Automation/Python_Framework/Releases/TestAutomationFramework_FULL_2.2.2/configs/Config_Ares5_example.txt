@@ -1,0 +1,7 @@
+@device_config
+port:15
+baudRate:38400
+probe_check_time:10
+dgto_check_time:1
+Ares5EnvSourcePath:"./sources/Env_sysman_00_07_03"
+device:"SystemManager xx.yy.zz"
